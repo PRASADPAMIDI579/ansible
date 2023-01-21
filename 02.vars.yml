@@ -7,7 +7,7 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-        msg: URL = "{{URL}}"
+        msg: URL1 = "{{URL1}}"
   tasks:
     - name: Print URL
       ansible.builtin.debug:
