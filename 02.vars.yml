@@ -2,6 +2,8 @@
   hosts: all
   vars: 
     URL: play.example.com
+  vars:
+    URL: task.example.com  
   tasks:
     - name: Print URL
       ansible.builtin.debug:
