@@ -7,11 +7,11 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-        msg: URL1 = "{{URL1}}"
-  tasks:
-    - name: Print URL
-      ansible.builtin.debug:
         msg: URL = "{{URL}}"
+  tasks:
+    - name: Print URL1
+      ansible.builtin.debug:
+        msg: URL1 = "{{URL1}}"
 
 
 # Note: if we declare a variable in PLAY Level then all the tasks can access that variable        
