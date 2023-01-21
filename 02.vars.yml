@@ -74,4 +74,12 @@
       register: OUT
     - name: Print Out variable
       ansible.builtin.debug:
-        msg: "{{OUT.stdout}}"        
+        msg: "{{OUT.stdout}}"  
+
+    - name: Declare a standard variable name
+      ansible.built.in.set_fact:
+        UPTIME_STDOUT: "{{OUT.stdout}}"
+      
+    - name: Print UPTIME_STDOUT
+      ansible.builtin.debug:
+        msg: "{{UPTIME_STDOUT}}"
