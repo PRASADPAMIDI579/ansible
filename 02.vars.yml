@@ -1,18 +1,11 @@
 - name: variable on play level
   hosts: all
   vars: 
-    URL: play.example.com
-  vars:
-    URL1: task.example.com  
+    URL: play.example.com 
   tasks:
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = "{{URL}}"
-  tasks:
-    - name: Print URL1
-      ansible.builtin.debug:
-        msg: URL1 = "{{URL1}}"
-
-
+ 
 # Note: if we declare a variable in PLAY Level then all the tasks can access that variable        
           
