@@ -65,3 +65,13 @@
     - name: print processor info
       ansible.builtin.debug:
         msg: "{{ansible_processor}}"    
+
+- name: Register a variable
+  hosts: all
+  tasks:
+    - name: Run Uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print Out variable
+      ansible.builtin.debug:
+        msg: "{{OUT}}"        
