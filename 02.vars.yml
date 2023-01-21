@@ -72,9 +72,9 @@
     - name: Run Uptime command
       ansible.builtin.shell: uptime
       register: OUT
-    - name: Print Out variable
-      ansible.builtin.debug:
-        msg: "{{OUT.stdout}}"  
+#    - name: Print Out variable
+#       ansible.builtin.debug:
+#        msg: "{{OUT.stdout}}"  
 
     - name: Declare a standard variable name
       ansible.built.in.set_fact:
