@@ -4,6 +4,6 @@
     - frontend
 
 - name: setup mongodb component
-  hosts: all
+  hosts: MONGODB
   roles:
     - mongodb 
