@@ -8,3 +8,19 @@
     src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
     dest: /tmp
     remote_src: yes   
+
+- name: Remove old content
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+    
+- name: copy roboshop content
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/
+    des: /usr/share/nginx/html
+
+- name: Start Nginx
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    enabled: yes        
